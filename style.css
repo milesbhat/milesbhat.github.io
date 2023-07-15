@@ -3,6 +3,7 @@ body {
     width: 100vw;
     margin: 0px;
     background-color: black;
+    font-family: 'Roboto', sans-serif; /* Using the Roboto font */
 }
 main {
     background-image: url(aron-van-de-pol-hXOGHaGCtdA-unsplash.jpg);
@@ -13,6 +14,16 @@ main {
     position: relative;
     z-index: 2;
 }
+
+.text-box {
+    position: absolute;
+    top: 2rem; /* adjust to your preference */
+    left: 2rem; /* adjust to your preference */
+    background-color: rgba(0, 0, 0, 0.5); /* Black translucent box */
+    padding: 2rem; /* space around the text */
+    color: white; /* White text color */
+}
+
 #nav-toggle {
     height: 5rem;
     width: 5rem;
