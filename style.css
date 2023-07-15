@@ -10,7 +10,8 @@ main {
     height: 100vh;
     width: 100vw;
     background-size: cover;
-    background-position: center 0%;
+    background-position: center 50%;
+    background-position-x: 10rem;
     position: relative;
     z-index: 2;
 }
@@ -19,9 +20,11 @@ main {
     position: absolute;
     top: 2rem; /* adjust to your preference */
     left: 2rem; /* adjust to your preference */
-    background-color: rgba(0, 0, 0, 0.5); /* Black translucent box */
-    padding: 2rem; /* space around the text */
+    background-color: rgba(255, 255, 255, 0.1); /* Black translucent box */
+    border-radius: 1rem;
+    padding: 1rem; /* space around the text */
     color: white; /* White text color */
+    z-index: 3;
 }
 
 #nav-toggle {
@@ -29,10 +32,10 @@ main {
     width: 5rem;
     position: fixed;
     z-index: 3;
-    left: 50%;
-    bottom: 3rem;
+    left: 63.2%;
+    bottom: 43.7%;
     transform: translateX(-50%);
-    background-color: rgb(117, 189, 213);
+    background-color: rgb(200, 100, 0);
     border: none;
     border-radius: 5rem;
     outline: none;
@@ -41,10 +44,19 @@ main {
     transition: transform, background-color;
     transition-timing-function: ease;
     transition-duration: 250ms;
+    opacity: 0.3;
 }
+
+#nav-toggle i {
+    color: white;
+    font-size: 2rem;
+  }
+  
 #nav-toggle:hover {
-    transform: translateX(-50%) scale(1.04);
+    transform: translateX(-50%) scale(2.0);
+    opacity: 0.8;
 }
 #nav-toggle:active {
-    transform: translateX(-50%) scale(0.96);
+    transform: translateX(-50%) scale(0.90);
+    opacity: 0.8;
 }
