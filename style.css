@@ -1,30 +1,29 @@
-#blueBox {
-    width: 66.66%; /* Two-thirds of the screen */
-    height: 100vh; /* Full height of the viewport */
-    background-color: lightblue; /* Light blue background */
-    position: fixed; /* Fixed position */
-    left: 0; /* Align to the left side of the viewport */
-    top: 0; /* Align to the top of the viewport */
+#contentWrapper {
     display: flex;
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    text-align: center; /* Center text */
-    font-size: 24px; /* Adjust font size as needed */
+    height: 100vh;
   }
   
-  #blueBox h1 {
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    /* Add more styles if needed */
+  .title-pane {
+    width: 66.67%;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
   }
-
-.image-scroll-pane {
+  
+  .title-pane h1 {
+    margin: 0;
+    /* Add any additional styling for your title here */
+  }
+  
+  .image-scroll-pane {
     width: 33.33%;
-    height: 100vh; /* Adjust if necessary */
+    height: 100vh;
     overflow: hidden;
     position: fixed;
     right: 0;
-    top: 0;
   }
   
   .image-container {
@@ -45,3 +44,4 @@
       transform: translateY(-100%);
     }
   }
+  
