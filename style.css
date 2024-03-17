@@ -1,47 +1,39 @@
-#contentWrapper {
+#container {
     display: flex;
     height: 100vh;
-  }
-  
-  .title-pane {
+}
+
+.left-pane {
     width: 66.67%;
     background-color: lightblue;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-  }
-  
-  .title-pane h1 {
-    margin: 0;
-    /* Add any additional styling for your title here */
-  }
-  
-  .image-scroll-pane {
+    text-align: center;
+}
+
+.right-pane {
     width: 33.33%;
-    height: 100vh;
     overflow: hidden;
-    position: fixed;
-    right: 0;
-  }
-  
-  .image-container {
-    position: relative;
-    animation: scroll 30s linear infinite;
-  }
-  
-  .image-container img {
+    position: relative; /* Changed to relative */
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    animation: scroll 10s linear infinite;
+    height: 100vh; /* This height can adjust based on your content */
+}
+
+.image-container img {
     width: 100%;
-    display: block;
-  }
-  
-  @keyframes scroll {
-    0% {
-      transform: translateY(0);
+    object-fit: cover; /* This makes your images cover the area nicely */
+}
+
+@keyframes scroll {
+    from {
+        transform: translateY(100%);
     }
-    100% {
-      transform: translateY(-100%);
+    to {
+        transform: translateY(-100%);
     }
-  }
-  
