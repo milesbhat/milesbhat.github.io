@@ -1,63 +1,27 @@
-body {
-    height: 100vh;
-    width: 100vw;
-    margin: 0px;
-    background-color: black;
-    font-family: 'Roboto', sans-serif; /* Using the Roboto font */
-}
-main {
-    background-image: url(aron-van-de-pol-hXOGHaGCtdA-unsplash.jpg);
-    height: 100vh;
-    width: 100vw;
-    background-size: cover;
-    background-position: center 50%;
-    background-position-x: 10rem;
-    position: relative;
-    z-index: 2;
-}
-
-.text-box {
-    position: absolute;
-    top: 2rem; /* adjust to your preference */
-    left: 2rem; /* adjust to your preference */
-    background-color: rgba(255, 255, 255, 0.1); /* Black translucent box */
-    border-radius: 1rem;
-    padding: 1rem; /* space around the text */
-    color: white; /* White text color */
-    z-index: 3;
-}
-
-#nav-toggle {
-    height: 5rem;
-    width: 5rem;
+.image-scroll-pane {
+    width: 33.33%;
+    height: 100vh; /* Adjust if necessary */
+    overflow: hidden;
     position: fixed;
-    z-index: 3;
-    left: 63.2%;
-    bottom: 43.7%;
-    transform: translateX(-50%);
-    background-color: rgb(79, 233, 128);
-    border: none;
-    border-radius: 5rem;
-    outline: none;
-    box-shadow: 0rem 0rem 4rem rgba(0 0 0 / 35%);
-    cursor: pointer;
-    transition: transform, background-color;
-    transition-timing-function: ease;
-    transition-duration: 250ms;
-    opacity: 0.3;
-}
-
-#nav-toggle i {
-    color: white;
-    font-size: 2rem;
-    position: fixed;
+    right: 0;
+    top: 0;
   }
-
-#nav-toggle:hover {
-    transform: translateX(-50%) scale(2.0);
-    opacity: 0.8;
-}
-#nav-toggle:active {
-    transform: translateX(-50%) scale(0.90);
-    opacity: 0.8;
-}
+  
+  .image-container {
+    position: relative;
+    animation: scroll 30s linear infinite;
+  }
+  
+  .image-container img {
+    width: 100%;
+    display: block;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
